@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Demo" type="Spatial"]
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+
+[node name="CSGCylinder" type="CSGCylinder" parent="CSGCombiner"]
+operation = 2
+radius = 1.29884
