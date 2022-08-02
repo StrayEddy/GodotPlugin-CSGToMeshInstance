@@ -24,7 +24,9 @@ func _on_PluginButton_pressed() -> void:
 func convert_csg_to_meshinstance():
 	var mesh_instance = MeshInstance.new()
 	var csg_mesh = csg.get_meshes()[1]
+	var csg_transform = csg.global_transform
 	mesh_instance.mesh = csg_mesh
 	csg.get_parent().add_child(mesh_instance)
+	mesh_instance.global_transform = csg_transform
 	mesh_instance.owner = root
 	csg.queue_free()
