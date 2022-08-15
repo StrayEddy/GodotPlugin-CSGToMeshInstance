@@ -1,22 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://c0cyl0tn3t6vq"]
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.831373, 0.235294, 0.235294, 1 )
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(0.831373, 0.235294, 0.235294, 1)
 
-[sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.0901961, 0.556863, 0.392157, 1 )
+[sub_resource type="StandardMaterial3D" id="2"]
+albedo_color = Color(0.0901961, 0.556863, 0.392157, 1)
 metallic = 1.0
 roughness = 0.0
 
-[node name="Demo" type="Spatial"]
+[node name="Demo" type="Node3D"]
 
-[node name="CSGCombiner" type="CSGCombiner" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.19692 )
+[node name="MyBox" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.19692)
 
-[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
-material = SubResource( 1 )
+[node name="CSGBox" type="CSGBox3D" parent="MyBox"]
+size = Vector3(1.85348, 2.4387, 2.13996)
+material = SubResource("1")
 
-[node name="CSGCylinder" type="CSGCylinder" parent="CSGCombiner"]
+[node name="CSGCylinder" type="CSGCylinder3D" parent="MyBox"]
 operation = 2
 radius = 1.29884
-material = SubResource( 2 )
+material = SubResource("2")

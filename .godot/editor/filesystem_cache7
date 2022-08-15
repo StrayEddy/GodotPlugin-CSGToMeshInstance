@@ -1,0 +1,13 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1660571647
+default_env.tres::Environment::-1::1659453016::0::1::::<><>::
+icon.png::CompressedTexture2D::8351214401014136708::1659455338::1660571648::1::::<><>::
+README.md::TextFile::-1::1659453747::0::1::::<><>::
+::res://addons/::1659438959
+::res://addons/csgtomeshinstance/::1659448434
+plugin.cfg::TextFile::-1::1659439001::0::1::::<><>::
+plugin.gd::GDScript::-1::1659447312::0::1::::<><>::
+plugin_button.gd::GDScript::-1::1659448434::0::1::::<><>::
+plugin_button.tscn::PackedScene::-1::1659447719::0::1::::<><>::res://addons/csgtomeshinstance/plugin_button.gd
+::res://demo/::1659453729
+demo.tscn::PackedScene::-1::1659453016::0::1::::<><>::

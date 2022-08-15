@@ -1,0 +1,4 @@
+res://addons/csgtomeshinstance/plugin.gd
+res://addons/csgtomeshinstance/plugin_button.gd
+res://addons/csgtomeshinstance/plugin_button.tscn
+res://demo/demo.tscn

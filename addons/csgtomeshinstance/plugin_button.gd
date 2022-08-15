@@ -1,15 +1,15 @@
 # Button to activate the painting and show the paint panel
 
-tool
+@tool
 extends Button
 
 class_name PluginButton
 
 var root :Node
-var csg :CSGShape
+var csg :CSGShape3D
 
 # Show button in UI, untoggled
-func show_button(root: Node, csg :CSGShape):
+func show_button(root: Node, csg :CSGShape3D):
 	self.root = root
 	self.csg = csg
 	show()
@@ -22,11 +22,13 @@ func _on_PluginButton_pressed() -> void:
 	convert_csg_to_meshinstance()
 
 func convert_csg_to_meshinstance():
-	var mesh_instance = MeshInstance.new()
+	var mesh_instance = MeshInstance3D.new()
 	var csg_mesh = csg.get_meshes()[1]
 	var csg_transform = csg.global_transform
+	var csg_name = csg.name
 	mesh_instance.mesh = csg_mesh
 	csg.get_parent().add_child(mesh_instance)
-	mesh_instance.global_transform = csg_transform
+	csg.get_parent().remove_child(csg)
 	mesh_instance.owner = root
-	csg.queue_free()
+	mesh_instance.global_transform = csg_transform
+	mesh_instance.name = csg_name
